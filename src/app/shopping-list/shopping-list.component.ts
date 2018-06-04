@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ingredients, Ingredient } from '../shared/ingredient.model';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -7,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
+  ingredients: Ingredient[] = [
+    {
+      name: 'Apple',
+      amount: 5
+    },
+    new Ingredient('tomatoes', 10)
+  ];
 
   constructor() { }
 
